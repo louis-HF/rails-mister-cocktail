@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <h1>Les Henris :</h1>
+      </div>
+    </div>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div class="card-category">Non populaire</div>
+          <div class="card-description">
+            <h2><%=cocktail.name%></h2>
+            <p>Ingrédients</p>
+          </div>
+          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          <a class="card-link" href="<%= cocktail_path(cocktail)%>" ></a>
+        </div>
+      </div>
+      <% end %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/224147_2030853168230_710575_n.jpg?_nc_cat=110&oh=5b72ead928090bedb85b1e25e1262d2b&oe=5C420E4E');">
+          <div class="card-description">
+            <h1>Ajouter une recette</h1>
+          </div>
+          <a class="card-link" href="cocktails/new"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
